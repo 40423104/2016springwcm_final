@@ -1,0 +1,17 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - microblog</title>
+    {% else %}
+    <title>microblog</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>Microblog: <a href="/index">Home</a>
+    |<a href="/logout">Logout</a>
+    |<a href="/g1">第1組連結</a>
+    </div>
+    <hr>
+    {% block body %}{% endblock %}
+  </body>
+</html>

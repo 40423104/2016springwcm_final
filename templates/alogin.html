@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+{% if openshift == True %}
+    <script type="text/javascript">
+    if ((location.href.search(/http:/) != -1) && (location.href.search(/login/) != -1))     window.location= 'https://' + location.host + location.pathname + location.search;
+    </script>
+{% endif %}
+  <h2>Alogin</h2>
+  <form action="{{ url_for('alogin_check') }}" method=post>
+    <dl>
+      <dt>Username:
+      <dd><input type='text' name='username'>
+      <dt>Password:
+      <dd><input type='password' name='password'>
+      <dd><input type=submit value=Alogin>
+    </dl>
+  </form>
+{% endblock %}
